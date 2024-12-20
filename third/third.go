@@ -16,7 +16,8 @@ package third
 
 import (
 	"errors"
-	"github.com/openimsdk/protocol/constant"
+
+	"github.com/liony823/protocol/constant"
 )
 
 func (x *FcmUpdateTokenReq) Check() error {
