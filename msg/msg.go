@@ -19,6 +19,22 @@ import (
 	"fmt"
 )
 
+func (x *GetActiveGroupReq) Check() error {
+	if x.End < x.Start {
+		return errors.New("end is less than start")
+	}
+	if x.Pagination == nil {
+		return errors.New("Pagination is nil")
+	}
+	if x.Pagination.PageNumber < 1 {
+		return errors.New("pageNumber is invalid")
+	}
+	if x.Pagination.ShowNumber < 1 {
+		return errors.New("showNumber is invalid")
+	}
+	return nil
+}
+
 func (x *GetActiveUserReq) Check() error {
 	if x.End < x.Start {
 		return errors.New("end is less than start")
