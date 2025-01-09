@@ -73,6 +73,10 @@ message PublicUserInfo {
   string nickname = 2;
   string faceURL = 3;
   string ex = 4;
+  string about = 5;
+  string coverURL = 6;
+  string address = 7;
+  string account = 8;
 }
 
 message UserInfo {
@@ -83,6 +87,11 @@ message UserInfo {
   int64 createTime = 5;
   int32 appMangerLevel = 6;
   int32 globalRecvMsgOpt = 7;
+  string account = 8;
+  string about = 9;
+  string coverURL = 10;
+  string address = 11;
+  string publicKey = 12;
 }
 
 message UserInfoWithEx {
