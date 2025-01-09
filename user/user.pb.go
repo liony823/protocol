@@ -40,7 +40,10 @@ const (
 type GetAllUserIDReq struct {
 	state         protoimpl.MessageState   `protogen:"open.v1"`
 	Pagination    *sdkws.RequestPagination `protobuf:"bytes,1,opt,name=pagination,proto3" json:"pagination"`
+	state         protoimpl.MessageState   `protogen:"open.v1"`
+	Pagination    *sdkws.RequestPagination `protobuf:"bytes,1,opt,name=pagination,proto3" json:"pagination"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -85,7 +88,11 @@ type GetAllUserIDResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Total         int32                  `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
 	UserIDs       []string               `protobuf:"bytes,2,rep,name=userIDs,proto3" json:"userIDs"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Total         int32                  `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
+	UserIDs       []string               `protobuf:"bytes,2,rep,name=userIDs,proto3" json:"userIDs"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -136,7 +143,10 @@ func (x *GetAllUserIDResp) GetUserIDs() []string {
 type AccountCheckReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	CheckUserIDs  []string               `protobuf:"bytes,1,rep,name=checkUserIDs,proto3" json:"checkUserIDs"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	CheckUserIDs  []string               `protobuf:"bytes,1,rep,name=checkUserIDs,proto3" json:"checkUserIDs"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -180,7 +190,10 @@ func (x *AccountCheckReq) GetCheckUserIDs() []string {
 type AccountCheckResp struct {
 	state         protoimpl.MessageState              `protogen:"open.v1"`
 	Results       []*AccountCheckRespSingleUserStatus `protobuf:"bytes,1,rep,name=results,proto3" json:"results"`
+	state         protoimpl.MessageState              `protogen:"open.v1"`
+	Results       []*AccountCheckRespSingleUserStatus `protobuf:"bytes,1,rep,name=results,proto3" json:"results"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -224,7 +237,10 @@ func (x *AccountCheckResp) GetResults() []*AccountCheckRespSingleUserStatus {
 type GetDesignateUsersReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserIDs       []string               `protobuf:"bytes,1,rep,name=userIDs,proto3" json:"userIDs"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserIDs       []string               `protobuf:"bytes,1,rep,name=userIDs,proto3" json:"userIDs"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -268,7 +284,10 @@ func (x *GetDesignateUsersReq) GetUserIDs() []string {
 type GetDesignateUsersResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UsersInfo     []*sdkws.UserInfo      `protobuf:"bytes,1,rep,name=usersInfo,proto3" json:"usersInfo"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UsersInfo     []*sdkws.UserInfo      `protobuf:"bytes,1,rep,name=usersInfo,proto3" json:"usersInfo"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -312,7 +331,10 @@ func (x *GetDesignateUsersResp) GetUsersInfo() []*sdkws.UserInfo {
 type UpdateUserInfoReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserInfo      *sdkws.UserInfo        `protobuf:"bytes,1,opt,name=userInfo,proto3" json:"userInfo"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserInfo      *sdkws.UserInfo        `protobuf:"bytes,1,opt,name=userInfo,proto3" json:"userInfo"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -355,7 +377,9 @@ func (x *UpdateUserInfoReq) GetUserInfo() *sdkws.UserInfo {
 
 type UpdateUserInfoResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -392,7 +416,10 @@ func (*UpdateUserInfoResp) Descriptor() ([]byte, []int) {
 type UpdateUserInfoExReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserInfo      *sdkws.UserInfoWithEx  `protobuf:"bytes,1,opt,name=userInfo,proto3" json:"userInfo"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserInfo      *sdkws.UserInfoWithEx  `protobuf:"bytes,1,opt,name=userInfo,proto3" json:"userInfo"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -435,7 +462,9 @@ func (x *UpdateUserInfoExReq) GetUserInfo() *sdkws.UserInfoWithEx {
 
 type UpdateUserInfoExResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -470,6 +499,11 @@ func (*UpdateUserInfoExResp) Descriptor() ([]byte, []int) {
 }
 
 type SetGlobalRecvMessageOptReq struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	UserID           string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	GlobalRecvMsgOpt int32                  `protobuf:"varint,3,opt,name=globalRecvMsgOpt,proto3" json:"globalRecvMsgOpt"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 	state            protoimpl.MessageState `protogen:"open.v1"`
 	UserID           string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	GlobalRecvMsgOpt int32                  `protobuf:"varint,3,opt,name=globalRecvMsgOpt,proto3" json:"globalRecvMsgOpt"`
@@ -523,7 +557,9 @@ func (x *SetGlobalRecvMessageOptReq) GetGlobalRecvMsgOpt() int32 {
 
 type SetGlobalRecvMessageOptResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -559,9 +595,12 @@ func (*SetGlobalRecvMessageOptResp) Descriptor() ([]byte, []int) {
 
 type SetConversationReq struct {
 	state            protoimpl.MessageState     `protogen:"open.v1"`
+	state            protoimpl.MessageState     `protogen:"open.v1"`
 	Conversation     *conversation.Conversation `protobuf:"bytes,1,opt,name=conversation,proto3" json:"conversation"`
 	NotificationType int32                      `protobuf:"varint,2,opt,name=notificationType,proto3" json:"notificationType"`
 	OperationID      string                     `protobuf:"bytes,3,opt,name=operationID,proto3" json:"operationID"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -619,7 +658,9 @@ func (x *SetConversationReq) GetOperationID() string {
 
 type SetConversationResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -654,6 +695,14 @@ func (*SetConversationResp) Descriptor() ([]byte, []int) {
 }
 
 type SetRecvMsgOptReq struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	OwnerUserID      string                 `protobuf:"bytes,1,opt,name=ownerUserID,proto3" json:"ownerUserID"`
+	ConversationID   string                 `protobuf:"bytes,2,opt,name=conversationID,proto3" json:"conversationID"`
+	RecvMsgOpt       int32                  `protobuf:"varint,3,opt,name=recvMsgOpt,proto3" json:"recvMsgOpt"`
+	NotificationType int32                  `protobuf:"varint,4,opt,name=notificationType,proto3" json:"notificationType"`
+	OperationID      string                 `protobuf:"bytes,5,opt,name=operationID,proto3" json:"operationID"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 	state            protoimpl.MessageState `protogen:"open.v1"`
 	OwnerUserID      string                 `protobuf:"bytes,1,opt,name=ownerUserID,proto3" json:"ownerUserID"`
 	ConversationID   string                 `protobuf:"bytes,2,opt,name=conversationID,proto3" json:"conversationID"`
@@ -731,7 +780,9 @@ func (x *SetRecvMsgOptReq) GetOperationID() string {
 
 type SetRecvMsgOptResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -766,6 +817,12 @@ func (*SetRecvMsgOptResp) Descriptor() ([]byte, []int) {
 }
 
 type GetConversationReq struct {
+	state          protoimpl.MessageState `protogen:"open.v1"`
+	ConversationID string                 `protobuf:"bytes,1,opt,name=conversationID,proto3" json:"conversationID"`
+	OwnerUserID    string                 `protobuf:"bytes,2,opt,name=ownerUserID,proto3" json:"ownerUserID"`
+	OperationID    string                 `protobuf:"bytes,3,opt,name=operationID,proto3" json:"operationID"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	ConversationID string                 `protobuf:"bytes,1,opt,name=conversationID,proto3" json:"conversationID"`
 	OwnerUserID    string                 `protobuf:"bytes,2,opt,name=ownerUserID,proto3" json:"ownerUserID"`
@@ -828,7 +885,10 @@ func (x *GetConversationReq) GetOperationID() string {
 type GetConversationResp struct {
 	state         protoimpl.MessageState     `protogen:"open.v1"`
 	Conversation  *conversation.Conversation `protobuf:"bytes,2,opt,name=conversation,proto3" json:"conversation"`
+	state         protoimpl.MessageState     `protogen:"open.v1"`
+	Conversation  *conversation.Conversation `protobuf:"bytes,2,opt,name=conversation,proto3" json:"conversation"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -870,6 +930,12 @@ func (x *GetConversationResp) GetConversation() *conversation.Conversation {
 }
 
 type GetConversationsReq struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	OwnerUserID     string                 `protobuf:"bytes,1,opt,name=ownerUserID,proto3" json:"ownerUserID"`
+	ConversationIDs []string               `protobuf:"bytes,2,rep,name=conversationIDs,proto3" json:"conversationIDs"`
+	OperationID     string                 `protobuf:"bytes,3,opt,name=operationID,proto3" json:"operationID"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
 	state           protoimpl.MessageState `protogen:"open.v1"`
 	OwnerUserID     string                 `protobuf:"bytes,1,opt,name=ownerUserID,proto3" json:"ownerUserID"`
 	ConversationIDs []string               `protobuf:"bytes,2,rep,name=conversationIDs,proto3" json:"conversationIDs"`
@@ -931,7 +997,10 @@ func (x *GetConversationsReq) GetOperationID() string {
 
 type GetConversationsResp struct {
 	state         protoimpl.MessageState       `protogen:"open.v1"`
+	state         protoimpl.MessageState       `protogen:"open.v1"`
 	Conversations []*conversation.Conversation `protobuf:"bytes,2,rep,name=conversations,proto3" json:"conversations"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -977,7 +1046,11 @@ type GetAllConversationsReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	OwnerUserID   string                 `protobuf:"bytes,1,opt,name=ownerUserID,proto3" json:"ownerUserID"`
 	OperationID   string                 `protobuf:"bytes,2,opt,name=operationID,proto3" json:"operationID"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	OwnerUserID   string                 `protobuf:"bytes,1,opt,name=ownerUserID,proto3" json:"ownerUserID"`
+	OperationID   string                 `protobuf:"bytes,2,opt,name=operationID,proto3" json:"operationID"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1027,7 +1100,10 @@ func (x *GetAllConversationsReq) GetOperationID() string {
 
 type GetAllConversationsResp struct {
 	state         protoimpl.MessageState       `protogen:"open.v1"`
+	state         protoimpl.MessageState       `protogen:"open.v1"`
 	Conversations []*conversation.Conversation `protobuf:"bytes,2,rep,name=conversations,proto3" json:"conversations"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1071,10 +1147,13 @@ func (x *GetAllConversationsResp) GetConversations() []*conversation.Conversatio
 
 type BatchSetConversationsReq struct {
 	state            protoimpl.MessageState       `protogen:"open.v1"`
+	state            protoimpl.MessageState       `protogen:"open.v1"`
 	Conversations    []*conversation.Conversation `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
 	OwnerUserID      string                       `protobuf:"bytes,2,opt,name=OwnerUserID,proto3" json:"OwnerUserID"`
 	NotificationType int32                        `protobuf:"varint,3,opt,name=notificationType,proto3" json:"notificationType"`
 	OperationID      string                       `protobuf:"bytes,4,opt,name=OperationID,proto3" json:"OperationID"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -1141,7 +1220,11 @@ type BatchSetConversationsResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Success       []string               `protobuf:"bytes,2,rep,name=Success,proto3" json:"Success"`
 	Failed        []string               `protobuf:"bytes,3,rep,name=Failed,proto3" json:"Failed"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Success       []string               `protobuf:"bytes,2,rep,name=Success,proto3" json:"Success"`
+	Failed        []string               `protobuf:"bytes,3,rep,name=Failed,proto3" json:"Failed"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1194,7 +1277,12 @@ type GetPaginationUsersReq struct {
 	Pagination    *sdkws.RequestPagination `protobuf:"bytes,2,opt,name=pagination,proto3" json:"pagination"`
 	UserID        string                   `protobuf:"bytes,3,opt,name=userID,proto3" json:"userID"`
 	NickName      string                   `protobuf:"bytes,4,opt,name=nickName,proto3" json:"nickName"`
+	state         protoimpl.MessageState   `protogen:"open.v1"`
+	Pagination    *sdkws.RequestPagination `protobuf:"bytes,2,opt,name=pagination,proto3" json:"pagination"`
+	UserID        string                   `protobuf:"bytes,3,opt,name=userID,proto3" json:"userID"`
+	NickName      string                   `protobuf:"bytes,4,opt,name=nickName,proto3" json:"nickName"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1253,7 +1341,11 @@ type GetPaginationUsersResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Total         int32                  `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
 	Users         []*sdkws.UserInfo      `protobuf:"bytes,2,rep,name=users,proto3" json:"users"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Total         int32                  `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
+	Users         []*sdkws.UserInfo      `protobuf:"bytes,2,rep,name=users,proto3" json:"users"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1304,7 +1396,10 @@ func (x *GetPaginationUsersResp) GetUsers() []*sdkws.UserInfo {
 type UserRegisterReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Users         []*sdkws.UserInfo      `protobuf:"bytes,1,rep,name=users,proto3" json:"users"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Users         []*sdkws.UserInfo      `protobuf:"bytes,1,rep,name=users,proto3" json:"users"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1347,7 +1442,9 @@ func (x *UserRegisterReq) GetUsers() []*sdkws.UserInfo {
 
 type UserRegisterResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1384,7 +1481,10 @@ func (*UserRegisterResp) Descriptor() ([]byte, []int) {
 type GetGlobalRecvMessageOptReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1426,6 +1526,10 @@ func (x *GetGlobalRecvMessageOptReq) GetUserID() string {
 }
 
 type GetGlobalRecvMessageOptResp struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	GlobalRecvMsgOpt int32                  `protobuf:"varint,1,opt,name=globalRecvMsgOpt,proto3" json:"globalRecvMsgOpt"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 	state            protoimpl.MessageState `protogen:"open.v1"`
 	GlobalRecvMsgOpt int32                  `protobuf:"varint,1,opt,name=globalRecvMsgOpt,proto3" json:"globalRecvMsgOpt"`
 	unknownFields    protoimpl.UnknownFields
@@ -1473,7 +1577,11 @@ type UserRegisterCountReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Start         int64                  `protobuf:"varint,1,opt,name=start,proto3" json:"start"`
 	End           int64                  `protobuf:"varint,2,opt,name=end,proto3" json:"end"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Start         int64                  `protobuf:"varint,1,opt,name=start,proto3" json:"start"`
+	End           int64                  `protobuf:"varint,2,opt,name=end,proto3" json:"end"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1527,6 +1635,7 @@ type UserRegisterCountResp struct {
 	Before        int64                  `protobuf:"varint,2,opt,name=before,proto3" json:"before"`
 	Count         map[string]int64       `protobuf:"bytes,3,rep,name=count,proto3" json:"count,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1586,7 +1695,12 @@ type SubscribeOrCancelUsersStatusReq struct {
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	UserIDs       []string               `protobuf:"bytes,2,rep,name=userIDs,proto3" json:"userIDs"`
 	Genre         int32                  `protobuf:"varint,3,opt,name=genre,proto3" json:"genre"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	UserIDs       []string               `protobuf:"bytes,2,rep,name=userIDs,proto3" json:"userIDs"`
+	Genre         int32                  `protobuf:"varint,3,opt,name=genre,proto3" json:"genre"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1644,7 +1758,10 @@ func (x *SubscribeOrCancelUsersStatusReq) GetGenre() int32 {
 type SubscribeOrCancelUsersStatusResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1688,7 +1805,10 @@ func (x *SubscribeOrCancelUsersStatusResp) GetStatusList() []*OnlineStatus {
 type GetSubscribeUsersStatusReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1732,7 +1852,10 @@ func (x *GetSubscribeUsersStatusReq) GetUserID() string {
 type GetSubscribeUsersStatusResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1778,7 +1901,12 @@ type OnlineStatus struct {
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	Status        int32                  `protobuf:"varint,2,opt,name=status,proto3" json:"status"`
 	PlatformIDs   []int32                `protobuf:"varint,3,rep,packed,name=platformIDs,proto3" json:"platformIDs"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	Status        int32                  `protobuf:"varint,2,opt,name=status,proto3" json:"status"`
+	PlatformIDs   []int32                `protobuf:"varint,3,rep,packed,name=platformIDs,proto3" json:"platformIDs"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1837,7 +1965,11 @@ type GetUserStatusReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	UserIDs       []string               `protobuf:"bytes,2,rep,name=userIDs,proto3" json:"userIDs"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	UserIDs       []string               `protobuf:"bytes,2,rep,name=userIDs,proto3" json:"userIDs"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1888,7 +2020,10 @@ func (x *GetUserStatusReq) GetUserIDs() []string {
 type GetUserStatusResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -1936,7 +2071,14 @@ type SetUserStatusReq struct {
 	PlatformID    int32                  `protobuf:"varint,3,opt,name=platformID,proto3" json:"platformID"`
 	ConnID        string                 `protobuf:"bytes,4,opt,name=connID,proto3" json:"connID"`
 	IsBackground  bool                   `protobuf:"varint,5,opt,name=isBackground,proto3" json:"isBackground"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	Status        int32                  `protobuf:"varint,2,opt,name=status,proto3" json:"status"`
+	PlatformID    int32                  `protobuf:"varint,3,opt,name=platformID,proto3" json:"platformID"`
+	ConnID        string                 `protobuf:"bytes,4,opt,name=connID,proto3" json:"connID"`
+	IsBackground  bool                   `protobuf:"varint,5,opt,name=isBackground,proto3" json:"isBackground"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2007,7 +2149,9 @@ func (x *SetUserStatusReq) GetIsBackground() bool {
 
 type SetUserStatusResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2047,7 +2191,13 @@ type UserOnlineStatus struct {
 	ConnID        string                 `protobuf:"bytes,2,opt,name=connID,proto3" json:"connID"`
 	Online        []int32                `protobuf:"varint,3,rep,packed,name=online,proto3" json:"online"`
 	Offline       []int32                `protobuf:"varint,4,rep,packed,name=offline,proto3" json:"offline"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	ConnID        string                 `protobuf:"bytes,2,opt,name=connID,proto3" json:"connID"`
+	Online        []int32                `protobuf:"varint,3,rep,packed,name=online,proto3" json:"online"`
+	Offline       []int32                `protobuf:"varint,4,rep,packed,name=offline,proto3" json:"offline"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2112,7 +2262,10 @@ func (x *UserOnlineStatus) GetOffline() []int32 {
 type SetUserOnlineStatusReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        []*UserOnlineStatus    `protobuf:"bytes,1,rep,name=status,proto3" json:"status"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Status        []*UserOnlineStatus    `protobuf:"bytes,1,rep,name=status,proto3" json:"status"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2155,7 +2308,9 @@ func (x *SetUserOnlineStatusReq) GetStatus() []*UserOnlineStatus {
 
 type SetUserOnlineStatusResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2196,7 +2351,14 @@ type ProcessUserCommandAddReq struct {
 	Uuid          string                  `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
 	Value         *wrapperspb.StringValue `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
 	Ex            *wrapperspb.StringValue `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
+	state         protoimpl.MessageState  `protogen:"open.v1"`
+	UserID        string                  `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	Type          int32                   `protobuf:"varint,2,opt,name=type,proto3" json:"type"`
+	Uuid          string                  `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
+	Value         *wrapperspb.StringValue `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
+	Ex            *wrapperspb.StringValue `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2267,7 +2429,9 @@ func (x *ProcessUserCommandAddReq) GetEx() *wrapperspb.StringValue {
 
 type ProcessUserCommandAddResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2306,7 +2470,12 @@ type ProcessUserCommandDeleteReq struct {
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	Type          int32                  `protobuf:"varint,2,opt,name=type,proto3" json:"type"`
 	Uuid          string                 `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	Type          int32                  `protobuf:"varint,2,opt,name=type,proto3" json:"type"`
+	Uuid          string                 `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2363,7 +2532,9 @@ func (x *ProcessUserCommandDeleteReq) GetUuid() string {
 
 type ProcessUserCommandDeleteResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2404,7 +2575,14 @@ type ProcessUserCommandUpdateReq struct {
 	Uuid          string                  `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
 	Value         *wrapperspb.StringValue `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
 	Ex            *wrapperspb.StringValue `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
+	state         protoimpl.MessageState  `protogen:"open.v1"`
+	UserID        string                  `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	Type          int32                   `protobuf:"varint,2,opt,name=type,proto3" json:"type"`
+	Uuid          string                  `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
+	Value         *wrapperspb.StringValue `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
+	Ex            *wrapperspb.StringValue `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2475,7 +2653,9 @@ func (x *ProcessUserCommandUpdateReq) GetEx() *wrapperspb.StringValue {
 
 type ProcessUserCommandUpdateResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2513,7 +2693,11 @@ type ProcessUserCommandGetReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	Type          int32                  `protobuf:"varint,2,opt,name=type,proto3" json:"type"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	Type          int32                  `protobuf:"varint,2,opt,name=type,proto3" json:"type"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2568,7 +2752,14 @@ type CommandInfoResp struct {
 	Uuid          string                 `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
 	Value         string                 `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
 	Ex            string                 `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Type          int32                  `protobuf:"varint,1,opt,name=type,proto3" json:"type"`
+	CreateTime    int64                  `protobuf:"varint,2,opt,name=createTime,proto3" json:"createTime"`
+	Uuid          string                 `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
+	Value         string                 `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
+	Ex            string                 `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2640,7 +2831,10 @@ func (x *CommandInfoResp) GetEx() string {
 type ProcessUserCommandGetResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	CommandResp   []*CommandInfoResp     `protobuf:"bytes,1,rep,name=CommandResp,proto3" json:"CommandResp"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	CommandResp   []*CommandInfoResp     `protobuf:"bytes,1,rep,name=CommandResp,proto3" json:"CommandResp"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2684,7 +2878,10 @@ func (x *ProcessUserCommandGetResp) GetCommandResp() []*CommandInfoResp {
 type ProcessUserCommandGetAllReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2732,7 +2929,14 @@ type AllCommandInfoResp struct {
 	Uuid          string                 `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
 	Value         string                 `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
 	Ex            string                 `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Type          int32                  `protobuf:"varint,1,opt,name=type,proto3" json:"type"`
+	CreateTime    int64                  `protobuf:"varint,2,opt,name=createTime,proto3" json:"createTime"`
+	Uuid          string                 `protobuf:"bytes,3,opt,name=uuid,proto3" json:"uuid"`
+	Value         string                 `protobuf:"bytes,4,opt,name=value,proto3" json:"value"`
+	Ex            string                 `protobuf:"bytes,5,opt,name=ex,proto3" json:"ex"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2804,7 +3008,10 @@ func (x *AllCommandInfoResp) GetEx() string {
 type ProcessUserCommandGetAllResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	CommandResp   []*AllCommandInfoResp  `protobuf:"bytes,1,rep,name=CommandResp,proto3" json:"CommandResp"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	CommandResp   []*AllCommandInfoResp  `protobuf:"bytes,1,rep,name=CommandResp,proto3" json:"CommandResp"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -2905,6 +3112,13 @@ func (x *AddNotificationAccountReq) GetFaceURL() string {
 	return ""
 }
 
+func (x *AddNotificationAccountReq) GetAppMangerLevel() int32 {
+	if x != nil {
+		return x.AppMangerLevel
+	}
+	return 0
+}
+
 type AddNotificationAccountResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
@@ -2965,12 +3179,24 @@ func (x *AddNotificationAccountResp) GetNickName() string {
 	return ""
 }
 
+func (x *AddNotificationAccountResp) GetAppMangerLevel() int32 {
+	if x != nil {
+		return x.AppMangerLevel
+	}
+	return 0
+}
+
 type UpdateNotificationAccountInfoReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	FaceURL       string                 `protobuf:"bytes,2,opt,name=faceURL,proto3" json:"faceURL"`
 	NickName      string                 `protobuf:"bytes,3,opt,name=nickName,proto3" json:"nickName"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	FaceURL       string                 `protobuf:"bytes,2,opt,name=faceURL,proto3" json:"faceURL"`
+	NickName      string                 `protobuf:"bytes,3,opt,name=nickName,proto3" json:"nickName"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3027,7 +3253,9 @@ func (x *UpdateNotificationAccountInfoReq) GetNickName() string {
 
 type UpdateNotificationAccountInfoResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3065,7 +3293,11 @@ type SearchNotificationAccountReq struct {
 	state         protoimpl.MessageState   `protogen:"open.v1"`
 	Keyword       string                   `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword"`
 	Pagination    *sdkws.RequestPagination `protobuf:"bytes,3,opt,name=pagination,proto3" json:"pagination"`
+	state         protoimpl.MessageState   `protogen:"open.v1"`
+	Keyword       string                   `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword"`
+	Pagination    *sdkws.RequestPagination `protobuf:"bytes,3,opt,name=pagination,proto3" json:"pagination"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3173,10 +3405,20 @@ func (x *NotificationAccountInfo) GetNickName() string {
 	return ""
 }
 
+func (x *NotificationAccountInfo) GetAppMangerLevel() int32 {
+	if x != nil {
+		return x.AppMangerLevel
+	}
+	return 0
+}
+
 type SearchNotificationAccountResp struct {
+	state                protoimpl.MessageState     `protogen:"open.v1"`
 	state                protoimpl.MessageState     `protogen:"open.v1"`
 	Total                int64                      `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
 	NotificationAccounts []*NotificationAccountInfo `protobuf:"bytes,2,rep,name=notificationAccounts,proto3" json:"notificationAccounts"`
+	unknownFields        protoimpl.UnknownFields
+	sizeCache            protoimpl.SizeCache
 	unknownFields        protoimpl.UnknownFields
 	sizeCache            protoimpl.SizeCache
 }
@@ -3228,7 +3470,10 @@ func (x *SearchNotificationAccountResp) GetNotificationAccounts() []*Notificatio
 type GetNotificationAccountReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3273,6 +3518,7 @@ type GetNotificationAccountResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
+	sizeCache     protoimpl.SizeCache
 }
 
 func (x *GetNotificationAccountResp) Reset() {
@@ -3305,11 +3551,19 @@ func (*GetNotificationAccountResp) Descriptor() ([]byte, []int) {
 	return file_user_user_proto_rawDescGZIP(), []int{64}
 }
 
+func (x *GetNotificationAccountResp) GetAccount() *NotificationAccountInfo {
+	if x != nil {
+		return x.Account
+	}
+	return nil
+}
+
 type SortQueryReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Asc           bool                   `protobuf:"varint,1,opt,name=asc,proto3" json:"asc"`
 	UserIDName    map[string]string      `protobuf:"bytes,2,rep,name=userIDName,proto3" json:"userIDName,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3360,7 +3614,10 @@ func (x *SortQueryReq) GetUserIDName() map[string]string {
 type SortQueryResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Users         []*sdkws.UserInfo      `protobuf:"bytes,2,rep,name=users,proto3" json:"users"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Users         []*sdkws.UserInfo      `protobuf:"bytes,2,rep,name=users,proto3" json:"users"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3404,7 +3661,10 @@ func (x *SortQueryResp) GetUsers() []*sdkws.UserInfo {
 type GetAllOnlineUsersReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Cursor        uint64                 `protobuf:"varint,1,opt,name=cursor,proto3" json:"cursor"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Cursor        uint64                 `protobuf:"varint,1,opt,name=cursor,proto3" json:"cursor"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -3449,7 +3709,11 @@ type GetAllOnlineUsersResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=StatusList,proto3" json:"StatusList"`
 	NextCursor    uint64                 `protobuf:"varint,2,opt,name=nextCursor,proto3" json:"nextCursor"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	StatusList    []*OnlineStatus        `protobuf:"bytes,1,rep,name=StatusList,proto3" json:"StatusList"`
+	NextCursor    uint64                 `protobuf:"varint,2,opt,name=nextCursor,proto3" json:"nextCursor"`
 	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 	sizeCache     protoimpl.SizeCache
 }
 
@@ -4016,53 +4280,59 @@ var file_user_user_proto_rawDesc = []byte{
 	0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x69, 0x6d, 0x2e, 0x75,
 	0x73, 0x65, 0x72, 0x2e, 0x41, 0x6c, 0x6c, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x49, 0x6e,
 	0x66, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x52, 0x0b, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52,
-	0x65, 0x73, 0x70, 0x22, 0x69, 0x0a, 0x19, 0x61, 0x64, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69,
-	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71,
-	0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b,
-	0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b,
-	0x4e, 0x61, 0x6d, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x18,
-	0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x22, 0x6a,
-	0x0a, 0x1a, 0x61, 0x64, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x12, 0x16, 0x0a, 0x06,
-	0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73,
-	0x65, 0x72, 0x49, 0x44, 0x12, 0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x12, 0x1a,
-	0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x70, 0x0a, 0x20, 0x75, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x12, 0x16,
-	0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06,
-	0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12, 0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52,
-	0x4c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c,
-	0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x23, 0x0a, 0x21,
-	0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
-	0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x73,
-	0x70, 0x22, 0x79, 0x0a, 0x1c, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4e, 0x6f, 0x74, 0x69, 0x66,
+	0x65, 0x73, 0x70, 0x22, 0x91, 0x01, 0x0a, 0x19, 0x61, 0x64, 0x64, 0x4e, 0x6f, 0x74, 0x69, 0x66,
 	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65,
-	0x71, 0x12, 0x18, 0x0a, 0x07, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x07, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x3f, 0x0a, 0x0a, 0x70,
-	0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x1f, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x69, 0x6d, 0x2e, 0x73, 0x64, 0x6b, 0x77, 0x73, 0x2e, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x52, 0x0a, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x67, 0x0a, 0x17,
-	0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f,
-	0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49,
-	0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12,
-	0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63,
-	0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63,
-	0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x8f, 0x01, 0x0a, 0x1d, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68,
-	0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f,
-	0x75, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x12, 0x58, 0x0a,
-	0x14, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63,
-	0x6f, 0x75, 0x6e, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x24, 0x2e, 0x6f, 0x70,
-	0x65, 0x6e, 0x69, 0x6d, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69,
-	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66,
-	0x6f, 0x52, 0x14, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41,
-	0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x73, 0x22, 0x33, 0x0a, 0x19, 0x67, 0x65, 0x74, 0x4e, 0x6f,
+	0x71, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63,
+	0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63,
+	0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x12,
+	0x26, 0x0a, 0x0e, 0x61, 0x70, 0x70, 0x4d, 0x61, 0x6e, 0x67, 0x65, 0x72, 0x4c, 0x65, 0x76, 0x65,
+	0x6c, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0e, 0x61, 0x70, 0x70, 0x4d, 0x61, 0x6e, 0x67,
+	0x65, 0x72, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x22, 0x92, 0x01, 0x0a, 0x1a, 0x61, 0x64, 0x64, 0x4e,
+	0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75,
+	0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12, 0x18,
+	0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b,
+	0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b,
+	0x4e, 0x61, 0x6d, 0x65, 0x12, 0x26, 0x0a, 0x0e, 0x61, 0x70, 0x70, 0x4d, 0x61, 0x6e, 0x67, 0x65,
+	0x72, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0e, 0x61, 0x70,
+	0x70, 0x4d, 0x61, 0x6e, 0x67, 0x65, 0x72, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x22, 0x70, 0x0a, 0x20,
+	0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71,
+	0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12, 0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65,
+	0x55, 0x52, 0x4c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55,
+	0x52, 0x4c, 0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x23,
+	0x0a, 0x21, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52,
+	0x65, 0x73, 0x70, 0x22, 0x79, 0x0a, 0x1c, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4e, 0x6f, 0x74,
+	0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74,
+	0x52, 0x65, 0x71, 0x12, 0x18, 0x0a, 0x07, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x3f, 0x0a,
+	0x0a, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x1f, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x69, 0x6d, 0x2e, 0x73, 0x64, 0x6b, 0x77, 0x73,
+	0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x52, 0x0a, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x8f,
+	0x01, 0x0a, 0x17, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41,
+	0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73,
+	0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72,
+	0x49, 0x44, 0x12, 0x18, 0x0a, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x07, 0x66, 0x61, 0x63, 0x65, 0x55, 0x52, 0x4c, 0x12, 0x1a, 0x0a, 0x08,
+	0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x26, 0x0a, 0x0e, 0x61, 0x70, 0x70, 0x4d,
+	0x61, 0x6e, 0x67, 0x65, 0x72, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05,
+	0x52, 0x0e, 0x61, 0x70, 0x70, 0x4d, 0x61, 0x6e, 0x67, 0x65, 0x72, 0x4c, 0x65, 0x76, 0x65, 0x6c,
+	0x22, 0x8f, 0x01, 0x0a, 0x1d, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4e, 0x6f, 0x74, 0x69, 0x66,
+	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65,
+	0x73, 0x70, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x12, 0x58, 0x0a, 0x14, 0x6e, 0x6f, 0x74, 0x69,
+	0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x73,
+	0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x24, 0x2e, 0x6f, 0x70, 0x65, 0x6e, 0x69, 0x6d, 0x2e,
+	0x75, 0x73, 0x65, 0x72, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x14, 0x6e, 0x6f,
 	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e,
 	0x74, 0x52, 0x65, 0x71, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x44, 0x22, 0x1c, 0x0a, 0x1a,
