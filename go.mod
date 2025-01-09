@@ -1,4 +1,4 @@
-module github.com/liony823/protocol
+module github.com/openimsdk/protocol
 
 go 1.22.7
 

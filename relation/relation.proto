@@ -293,6 +293,82 @@ message getFriendInfoResp {
   repeated FriendInfoOnly friendInfos = 1;
 }
 
+message userRelation {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+  int32 isBlocked = 3;
+  int32 isFollowing = 4;
+  int32 isSubscribed = 5;
+  int64 createTime = 6;
+  int64 updateTime = 7;
+}
+
+message blockUserReq {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+}
+
+
+message blockUserResp {
+}
+
+message unblockUserReq {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+}
+
+message unblockUserResp {
+}
+
+message followUserReq {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+}
+
+message followUserResp {
+}
+
+message unfollowUserReq {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+}
+
+message unfollowUserResp {
+}
+
+message subscribeUserReq {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+}
+
+message subscribeUserResp {
+}
+
+message unsubscribeUserReq {
+  string ownerUserID = 1;
+  string relatedUserID = 2;
+}
+
+message unsubscribeUserResp {
+}
+
+message getFollowerIDsReq {
+  string userID = 1;
+}
+
+message getFollowerIDsResp {
+  repeated string userIDs = 1;
+}
+
+message getSubscriberIDsReq {
+  string userID = 1;
+}
+
+message getSubscriberIDsResp {
+  repeated string userIDs = 1;
+}
+
+
 service friend {
   // Friend request
   rpc applyToAddFriend(applyToAddFriendReq) returns (applyToAddFriendResp);
@@ -346,4 +422,22 @@ service friend {
   rpc NotificationUserInfoUpdate(notificationUserInfoUpdateReq) returns (notificationUserInfoUpdateResp);
 
   rpc getFriendInfo(getFriendInfoReq) returns (getFriendInfoResp);
+
+  // owlIM 新加rpc
+  // Block user
+  rpc blockUser(blockUserReq) returns (blockUserResp);
+  // Unblock user
+  rpc unblockUser(unblockUserReq) returns (unblockUserResp);
+  // Follow user
+  rpc followUser(followUserReq) returns (followUserResp);
+  // Unfollow user
+  rpc unfollowUser(unfollowUserReq) returns (unfollowUserResp);
+  // Subscribe user
+  rpc subscribeUser(subscribeUserReq) returns (subscribeUserResp);
+  // Unsubscribe user
+  rpc unsubscribeUser(unsubscribeUserReq) returns (unsubscribeUserResp);
+  // Get follower user IDs
+  rpc getFollowerIDs(getFollowerIDsReq) returns (getFollowerIDsResp);
+  // Get subscriber user IDs
+  rpc getSubscriberIDs(getSubscriberIDsReq) returns (getSubscriberIDsResp);
 }

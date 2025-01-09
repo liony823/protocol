@@ -8,7 +8,7 @@ package meeting
 
 import (
 	context "context"
-	wrapperspb "github.com/liony823/protocol/wrapperspb"
+	wrapperspb "github.com/openimsdk/protocol/wrapperspb"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

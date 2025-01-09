@@ -17,7 +17,7 @@ package auth
 import (
 	"errors"
 
-	"github.com/liony823/protocol/constant"
+	"github.com/openimsdk/protocol/constant"
 )
 
 func (x *GetAdminTokenReq) Check() error {
