@@ -18,8 +18,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/liony823/protocol/constant"
-	"github.com/liony823/protocol/util/datautil"
+	"github.com/openimsdk/protocol/util/datautil"
 )
 
 func (x *GetAllUserIDReq) Check() error {
@@ -193,14 +192,8 @@ func (x *SubscribeOrCancelUsersStatusReq) Check() error {
 }
 
 func (x *GetUserStatusReq) Check() error {
-	if x.UserID == "" {
-		return errors.New("UserID is empty")
-	}
-	if x.UserIDs == nil {
-		return errors.New("user-list is empty")
-	}
-	if len(x.UserIDs) > constant.ParamMaxLength {
-		return errors.New("user-list is Limit Exceeded")
+	if len(x.UserIDs) == 0 {
+		return errors.New("UserIDs is empty")
 	}
 	return nil
 }
