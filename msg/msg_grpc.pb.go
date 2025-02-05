@@ -22,7 +22,7 @@ package msg
 
 import (
 	context "context"
-	sdkws "github.com/liony823/protocol/sdkws"
+	sdkws "github.com/openimsdk/protocol/sdkws"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
