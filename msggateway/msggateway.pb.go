@@ -21,7 +21,7 @@
 package msggateway
 
 import (
-	sdkws "github.com/liony823/protocol/sdkws"
+	sdkws "github.com/openimsdk/protocol/sdkws"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
