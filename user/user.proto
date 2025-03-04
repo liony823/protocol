@@ -337,6 +337,24 @@ message getAllOnlineUsersResp {
   uint64 nextCursor = 2;
 }
 
+
+/** owlIM 新加 */
+
+message onlineTime {
+  string userID = 1;
+  int64 timestamp = 2;
+}
+
+message getUsersTimeReq {
+  repeated string userIDs = 2;
+}
+
+message getUsersTimeResp{
+  repeated onlineTime timeList = 1;
+}
+
+
+
 service user {
   //Get the specified user information full field
   rpc getDesignateUsers(getDesignateUsersReq) returns (getDesignateUsersResp);
@@ -389,4 +407,7 @@ service user {
   rpc setUserOnlineStatus(setUserOnlineStatusReq) returns (setUserOnlineStatusResp);
   // get all online users
   rpc getAllOnlineUsers(getAllOnlineUsersReq) returns (getAllOnlineUsersResp);
+
+  // get users online time
+  rpc getUsersTime(getUsersTimeReq) returns (getUsersTimeResp);
 }
