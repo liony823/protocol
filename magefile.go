@@ -169,8 +169,8 @@ func GenGo() error {
 			// "--proto_path=" + filepath.Join(".", module),
 			"--go_out=" + filepath.Join(".", module),
 			"--go-grpc_out=" + filepath.Join(".", module),
-			"--go_opt=module=github.com/liony823/protocol/" + strings.Join([]string{module}, "/"),
-			"--go-grpc_opt=module=github.com/liony823/protocol/" + strings.Join([]string{module}, "/"),
+			"--go_opt=module=github.com/openimsdk/protocol/" + strings.Join([]string{module}, "/"),
+			"--go-grpc_opt=module=github.com/openimsdk/protocol/" + strings.Join([]string{module}, "/"),
 			filepath.Join(module, module) + ".proto",
 		}
 		// log.Println("protoc args", args)
