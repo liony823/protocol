@@ -118,6 +118,8 @@ const (
 
 	HasReadReceipt = 2200
 
+	StreamMsgNotification = 2300
+
 	NotificationEnd = 5000
 
 	// status.
