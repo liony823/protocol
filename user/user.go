@@ -260,9 +260,9 @@ func (x *AddNotificationAccountReq) Check() error {
 	if x.NickName == "" {
 		return errors.New("nickName is empty")
 	}
-	if x.FaceURL == "" {
-		return errors.New("faceURL is empty")
-	}
+	//if x.FaceURL == "" {
+	//	return errors.New("faceURL is empty")
+	//}
 	return nil
 }
 
@@ -283,6 +283,16 @@ func (x *SearchNotificationAccountReq) Check() error {
 	}
 	if x.Pagination.PageNumber < 1 {
 		return errors.New("pageNumber is invalid")
+	}
+	return nil
+}
+
+func (x *UpdateUserInfoExReq) Check() error {
+	if x.UserInfo == nil {
+		return errors.New("userInfo is empty")
+	}
+	if x.UserInfo.UserID == "" {
+		return errors.New("userID is empty")
 	}
 	return nil
 }

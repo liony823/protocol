@@ -39,7 +39,6 @@ const (
 	CustomOnlineOnly             = 120
 	ReactionMessageModifier      = 121
 	ReactionMessageDeleter       = 122
-	Stream                       = 123
 	Common                       = 200
 	GroupMsg                     = 201
 	SignalMsg                    = 202
@@ -108,6 +107,7 @@ const (
 	ConversationPrivateChatNotification = 1701
 	ConversationUnreadNotification      = 1702
 	ClearConversationNotification       = 1703
+	ConversationDeleteNotification      = 1704
 
 	BusinessNotificationBegin = 2000
 	BusinessNotification      = 2001
@@ -117,8 +117,6 @@ const (
 	DeleteMsgsNotification = 2102
 
 	HasReadReceipt = 2200
-
-	StreamMsgNotification = 2300
 
 	NotificationEnd = 5000
 

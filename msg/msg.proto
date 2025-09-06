@@ -56,7 +56,20 @@ message SendMsgResp {
   string serverMsgID = 1;
   string clientMsgID = 2;
   int64 sendTime = 3;
+  sdkws.MsgData modify = 4;
 }
+
+message SendSimpleMsgReq {
+  sdkws.MsgData msgData = 3;
+}
+
+message SendSimpleMsgResp {
+  string serverMsgID = 1;
+  string clientMsgID = 2;
+  int64 sendTime = 3;
+  sdkws.MsgData modify = 4;
+}
+
 
 message SetSendMsgStatusReq {
   int32 status = 1;
@@ -189,6 +202,7 @@ message GetConversationMaxSeqResp {
 message GetConversationsHasReadAndMaxSeqReq {
   string userID = 1;
   repeated string conversationIDs = 2;
+  bool returnPinned = 3;
 }
 
 message Seqs {
@@ -199,6 +213,7 @@ message Seqs {
 
 message GetConversationsHasReadAndMaxSeqResp {
   map<string, Seqs> seqs = 1;
+  repeated string pinnedConversationIDs = 2;
 }
 
 message GetActiveUserReq {
@@ -355,29 +370,6 @@ message GetActiveConversationResp {
   repeated ActiveConversation conversations = 1;
 }
 
-message AppendStreamMsgReq {
-  string clientMsgID = 1;
-  int64 startIndex = 2;
-  repeated string packets = 3;
-  bool end = 4;
-}
-
-message AppendStreamMsgResp {}
-
-message GetStreamMsgReq {
-  string clientMsgID = 1;
-}
-
-message GetStreamMsgResp {
-  string clientMsgID = 1;
-  string conversationID = 2;
-  string userID = 3;
-  repeated string packets = 4;
-  bool end = 5;
-  int64 createTime = 6;
-  int64 deadlineTime = 7;
-}
-
 message SetUserConversationMaxSeqReq {
   string conversationID = 1;
   repeated string ownerUserID = 2;
@@ -425,6 +417,8 @@ service msg {
   rpc SearchMessage(SearchMessageReq) returns (SearchMessageResp);
   //发送消息
   rpc SendMsg(SendMsgReq) returns (SendMsgResp);
+  //简易发送消息
+  rpc SendSimpleMsg(SendSimpleMsgReq) returns (SendSimpleMsgResp);
 
   rpc SetUserConversationsMinSeq(SetUserConversationsMinSeqReq) returns (SetUserConversationsMinSeqResp);
 
@@ -458,9 +452,7 @@ service msg {
   rpc DestructMsgs(DestructMsgsReq) returns (DestructMsgsResp);
 
   rpc GetActiveConversation(GetActiveConversationReq) returns (GetActiveConversationResp);
-
-  rpc AppendStreamMsg(AppendStreamMsgReq) returns (AppendStreamMsgResp);
-  rpc GetStreamMsg(GetStreamMsgReq) returns (GetStreamMsgResp);
+  
   rpc SetUserConversationMaxSeq(SetUserConversationMaxSeqReq) returns (SetUserConversationMaxSeqResp);
   rpc SetUserConversationMinSeq(SetUserConversationMinSeqReq) returns (SetUserConversationMinSeqResp);
   rpc GetLastMessageSeqByTime(GetLastMessageSeqByTimeReq) returns (GetLastMessageSeqByTimeResp);
