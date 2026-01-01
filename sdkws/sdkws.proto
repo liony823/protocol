@@ -542,6 +542,18 @@ message RevokeMsgTips {
   bool isAdminRevoke = 8;
 }
 
+message EditMsgTips {
+  string editorUserID = 1;
+  string clientMsgID = 2;
+  int64 editTime = 3;
+  int32 sessionType = 4;
+  int64 seq = 5;
+  string conversationID = 6;
+  bool isAdminEdit = 7;
+  string newContent = 8;
+  int32 contentType = 9;
+}
+
 message MessageRevokedContent {
   string revokerID = 1;
   int32 revokerRole = 2;
