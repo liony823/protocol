@@ -16,6 +16,7 @@ const (
 	Location         = 109
 	Custom           = 110
 	Revoke           = 111
+	Edit             = 112
 	Typing           = 113
 	Quote            = 114
 
@@ -100,7 +101,8 @@ const (
 	BusinessNotificationEnd   = 2099
 
 	MsgRevokeNotification  = 2101
-	DeleteMsgsNotification = 2102
+	MsgEditNotification    = 2102
+	DeleteMsgsNotification = 2103
 
 	HasReadReceipt = 2200
 
